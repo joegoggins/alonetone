@@ -1,0 +1,2 @@
+module Loopoff::PlaylistsHelper
+end

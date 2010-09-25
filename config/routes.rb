@@ -86,6 +86,9 @@ ActionController::Routing::Routes.draw do |map|
     :path_prefix => ':login' do |playlist|
     playlist.resources :comments
    end
+   user.namespace(:loopoff, :path_prefix => ':login/loopoff') do |loopoff|
+     loopoff.resources :playlists
+   end
   end
   
   map.toggle_favorite 'toggle_favorite', :controller => 'users', :action => 'toggle_favorite'
